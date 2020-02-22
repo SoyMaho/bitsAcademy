@@ -1,2 +1,2 @@
 # bitsAcademy
-Project BitsAcademy 
+Project BitsAcademy : Proyecto escolar
