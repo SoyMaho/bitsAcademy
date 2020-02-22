@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Inicio</title>
+  </head>
+  <body>
+
+<div class="">
+  <nav>
+        <ul class="menu">
+          <li class="item"><a href="index.html"> Inicio</a> </li>
+          <li class="item" ><a href="cursos.html">Cursos</a> </li>
+          <li class="item" ><a href="talleres.html">Talleres</a></li>
+          <li class="item"><a href="nosotros.html">Nosotros</a></li>
+          <li class="item"><a href="contactos.html">Contacto</a></li>
+        </ul>
+  </nav>
+</div>
+
+<div class="top_Image">
+  <img src="img/principal.jpg" alt="">
+</div>
+
+<div class="contenedor_mapa_form">
+
+<h1>Contactanos</h1>
+
+  <div class="band">
+    <div class="item-1">
+      <form>
+    <ul class="form-style-1">
+        <li><label>Nombre completo <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Nombre" /> <input type="text" name="field2" class="field-divided" placeholder="Apellido" /></li>
+        <li>
+            <label>Email <span class="required">*</span></label>
+            <input type="email" name="field3" class="field-long" />
+        </li>
+        <li>
+            <label>Curso o Taller de interes</label>
+            <select name="field4" class="field-select">
+            <option value="Taller 1">Taller 1</option>
+            <option value="Curso 1">Curso 1</option>
+            <option value="Taller 2">Taller 2 </option>
+            </select>
+        </li>
+        <li>
+            <label>Su mensaje <span class="required">*</span></label>
+            <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        </li>
+        <li>
+            <input type="submit" value="Submit" />
+        </li>
+    </ul>
+    </form>
+    </div>
+
+    <div class="item-2">
+          <!--The div element for the map -->
+      <div id="map"></div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 20.684195, lng: -103.379969},
+            zoom: 8
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg2Vw9jQLhAUpGsVDcocpDFcUgAJ7jJRs&callback=initMap"
+      async defer></script>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+  </body>
+  <footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="social-wrapper">
+    <ul>
+      <li>
+        <a href="https://twitter.com/?lang=es" target="_blank">
+          <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
+      </li>
+      <li>
+        <a href="https://es-la.facebook.com/" target="_blank">
+          <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/?gl=MX&hl=es-419" target="_blank">
+          <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
+      </li>
+    </ul>
+  </div>
+
+
+  </footer>
+
+
+</html>
