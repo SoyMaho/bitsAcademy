@@ -1,3 +1,15 @@
+<?php
+session_start();
+include("conexion.php");
+include_once 'sesion.php';
+$sesion = new sesion ();
+
+$currentUser = $sesion->getCurrentUser();
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -26,48 +38,88 @@
   <img src="img/principal.jpg" alt="">
 </div>
 
+<div class="info">
 
 
 
-<div class="text_image_left_1">
-  <h2>¿Quienes Somos?</h2>
-  <p>Somos Gamers, pioneros en la educacion digital, enfocados en eseñarte lo que necesitas para ser un creador de contenido. Nuestro principal objetivo es formar a los desarrolladores de videojuegos del mañana</p>
+<?php  try {
+   $con = new PDO("mysql:host=$hostBD; dbname=$dataBD", $userBD, $passBD);
+   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+   $stmt = $con->prepare('SELECT *  FROM usuarios WHERE id_u = :id_u');
+   $stmt->execute(
+     array(
+     'id_u' =>  $currentUser)
+   );
+
+   while( $datos = $stmt->fetch()){
+
+     echo '<h2> Bienvenido </h2>' . $datos[1] ;
+     echo  "&nbsp;" . $datos[2] ;
+     echo "&nbsp;" . $datos[3] ;
+     echo "<br/>". "Estas inscrito al curso: " . $datos[7];
+
+   }
+
+
+
+
+ } catch(PDOException $e) {
+   echo 'Error: ' . $e->getMessage();
+ }
+ ?>
+
 </div>
-<div class="Title_Team">
-  <h1>El equipo</h1>
+
+
+<div class="band">
+
+  <div class="item-1">
+    <a href="#" class="card">
+      <article>
+        <h1>Nuevo Curso</h1>
+      </article>
+
+      <div class="thumb" style="background-image: url(img/moon.jpeg)"> </div>
+      <article>
+        <h1>Diseño de videojuegos 2D</h1>
+      </article>
+    </a>
+  </div>
+
+  <p class="principal">Aprende a diseñar y codificar videojuegos en 2D completamente funcionales con nuestro curso de "Diseño de videojuegos en 2D"</p>
+
+</div>
+
+<div class="titulo_Principal">
+  <h1>Ultimas Noticias</h1>
 </div>
 
 
 <div class="band">
   <div class="item-1">
     <a href="#" class="card">
-      <div class="thumb" style="background-image: url(img/avatar.jpg);"> </div>
+      <div class="thumb" style="background-image: url(img/evo_videojuegos.jpg)"> </div>
       <article>
-        <h1>Nombre: Manuel Figueroa</h1>
-        <p>Especialidad: Unity 3d </p>
-        <span></span>
+        <h1>La proxima evolucion de los videojuegos</h1>
       </article>
     </a>
   </div>
 
   <div class="item-2">
     <a href="#" class="card">
-      <div class="thumb" style="background-image: url(img/avatar.jpg);"> </div>
+      <div class="thumb" style="background-image: url(img/R_aumentada.jpg)"> </div>
       <article>
-        <h1>Nombre: Ernesto Cordova</h1>
-        <p>Especialidad: Diseño y desarrollo 2D </p>
-        <span></span>
+        <h1>Aumenta el consumo de realidad aumentada</h1>
       </article>
     </a>
   </div>
 
   <div class="item-3">
     <a href="#" class="card">
-      <div class="thumb" style="background-image: url(img/avatar.jpg);"> </div>
+      <div class="thumb" style="background-image: url(img/pokemon_go.jpg)"> </div>
       <article>
-        <h1>Nombre: Oliver Rodriguez</h1>
-        <p>Especialidad: Desarrollo de RA y Movil</p>
-        <span></span>
+        <h1>Pokemon Go tiene ganancias por mas de 800 millones</h1>
       </article>
     </a>
   </div>
@@ -75,7 +127,11 @@
 </div>
 
 
+
+
+
   </body>
+
 
   <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="social-wrapper">
@@ -97,6 +153,7 @@
 
 
 </footer>
+
 
 
 

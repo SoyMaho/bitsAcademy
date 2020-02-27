@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("conexion.php");
 if(isset($_POST['btn-signup']))
 {
@@ -109,7 +108,7 @@ if(isset($_POST['btn-signup']))
    {
 
 // Inicio Script para los ingresos de datos
-
+      session_start();
       try
       {
 
@@ -172,9 +171,9 @@ if(isset($_POST['btn-signup']))
      // <!-- Fin del script para conexion e ingreso de usuarios. -->
 
 
+  ?>
 
-
-        
+        <?php
  }
 }
 ?>
@@ -202,13 +201,13 @@ if(isset($error))
   <div class="">
     <nav>
           <ul class="menu">
-            <li class="item"><a href="index.html"> Inicio</a> </li>
+            <li class="item"><a href="home.php"> Inicio</a> </li>
             <li class="item" ><a href="cursos.html">Cursos</a> </li>
             <li class="item" ><a href="talleres.html">Talleres</a></li>
             <li class="item"><a href="nosotros.html">Nosotros</a></li>
             <li class="item"><a href="contactos.html">Contacto</a></li>
             <li class="item"><a href="registro.php">Registrarse</a></li>
-            <li class="item"><a href="ingresar.php">Ingresar</a></li>
+            <li class="item"><a href="logout.php">Salir</a></li>
           </ul>
     </nav>
   </div>
