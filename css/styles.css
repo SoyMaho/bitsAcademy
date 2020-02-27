@@ -1,0 +1,460 @@
+/*Propiedades generales*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+nav {
+    background: #222;
+    padding: 5px 100px;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+/*Nav Var*/
+
+.item {
+display: block;
+width: auto;
+order:1;
+text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/*Imagen principal*/
+
+.top_Image img{
+  width: 100%;
+}
+
+.top_title{
+  margin-top: 70px;
+  margin-left: 5%;
+}
+
+div.text_image_left_1{
+  text-align: center;
+  height: 190px;
+  margin-top: 10%;
+  background-image: url(../img/pixeles.jpg);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: 85%,10%;
+}
+
+div.text_image_left_1 p{
+  width: 34%;
+  margin-left: 10%;
+}
+
+div.text_image_left_1 h2{
+  width: 50%;
+  margin-left: 3%;
+
+}
+
+center{
+  margin: 10%;
+}
+
+.Title_Team{
+  margin-top: 150px;
+  margin-left: 62px;
+}
+
+#container {
+    width:90%;
+    height: 500px;
+    text-align:center;
+    margin:0 auto;
+}
+
+#left {
+    float:left;
+    width:200px;
+    height: 300px;
+    background: #888;
+    padding-left: 1%;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    width:100px;
+    height: 100px;
+    background: #888;
+}
+
+#right {
+    float:right;
+    width:100px;
+    height: 100px;
+    background: #888;
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 75px auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 150px;
+}
+
+.band-2 {
+  width: 90%;
+  max-width: 1240px;
+  margin: 135px auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 150px;
+}
+
+.principal {
+  width: 433px;
+}
+.titulo_Principal{
+  margin-left: 60px;
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card article {
+  padding: 20px;
+}
+
+/* typography */
+.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  line-height: 1.4;
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Footer */
+
+
+.site-footer {
+  background-color: #0d0b0b;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+#social-wrapper {
+	text-align: center;
+}
+
+/*Social Media Icons*/
+.social-wrapper {
+  text-align: left;
+padding-left: 50px;
+}
+
+.social-wrapper ul li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.twitter-icon,
+.facebook-icon,
+.youtube-icon
+{
+	margin-top: .625em;
+	width: 40px;
+	height: 40px;
+	opacity: .6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+  border-radius: 25px;
+}
+
+.twitter-icon:hover,
+.facebook-icon:hover,
+.youtube-icon:hover {
+	opacity: 1.0;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.footer-nav p {
+	text-align: center;
+}
+
+#map {
+  height: 600px;
+  width: 600px;
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+.contenedor_mapa_form{
+  width: 80%;
+}
+
+.contenedor_mapa_form h1{
+  margin-top: 50px;
+  margin-left: 7%;
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Formato Pantalla Grande, ajuste de columnas grid template*/
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*
+#int{
+  background: #777;
+  width:180px;
+  height: 250px;
+  padding: 5px 5px;
+  left: 20%;
+}*/
+/*
+#int img{
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+}*/
+
+
+/* Contenedor hecho por mi para las tarjetas */
+/*
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.element {
+background-color: #999;
+width: 300px;
+height: 350px;
+margin: 6%;
+
+
+}
+
+.element img {
+  width: 250px;
+  margin: 50px 25px;
+  justify-content: center;
+}
+*/
+
+
+/*Estilos Formulario*/
+
+
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 250px 3px 0;
+	padding:0px;
+	/*display:block;*/
+	font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}
+
+/*Estilos formulario Registro*/
+
+
+#login-form
+{
+ margin-top:70px;
+}
+table
+{
+ border:solid #dcdcdc 1px;
+ padding:25px;
+ box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+table tr,td
+{
+ padding:15px;
+}
+table tr td input
+{
+ width:97%;
+ height:45px;
+ border:solid #e1e1e1 1px;
+ border-radius:3px;
+ padding-left:10px;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:16px;
+ background:#f9f9f9;
+ transition-duration:0.5s;
+ box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4);
+}
+
+table tr td button
+{
+ width:100%;
+ height:45px;
+ border:0px;
+ background:rgba(12,45,78,11);
+ background:-moz-linear-gradient(top, #595959 , #515151);
+ border-radius:3px;
+ box-shadow: 1px 1px 1px rgba(1,0,0,0.2);
+ color:#f9f9f9;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+ font-weight:bolder;
+ text-transform:uppercase;
+}
+table tr td button:active
+{
+ position:relative;
+ top:1px;
+}
+table tr td a
+{
+ text-decoration:none;
+ color:#00a2d1;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:18px;
+}
+
+#error
+{
+ color: brown;
+ font-family:Verdana, Geneva, sans-serif;
+ font-weight:bolder;
+ text-transform:capitalize;
+}
