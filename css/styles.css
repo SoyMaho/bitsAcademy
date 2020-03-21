@@ -146,6 +146,7 @@ center{
 }
 .titulo_Principal{
   margin-left: 60px;
+  margin-bottom: 3%;
 }
 
 .card {
@@ -457,4 +458,28 @@ table tr td a
  font-family:Verdana, Geneva, sans-serif;
  font-weight:bolder;
  text-transform:capitalize;
+}
+
+
+
+/* Pruebas bootstrap */
+
+
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+}
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
 }
