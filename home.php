@@ -16,23 +16,31 @@ $currentUser = $sesion->getCurrentUser();
     <meta charset="utf-8">
     <link href="css/styles.css" rel="stylesheet">
     <title>Inicio</title>
+    <!-- Enlace al CSS para hacer funcionar bootstrap -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+
   </head>
   <body>
 
-<div class="">
-  <nav>
-        <ul class="menu">
-          <li class="item"><a href="home.php"> Inicio</a> </li>
-          <li class="item" ><a href="cursos.html">Cursos</a> </li>
-          <li class="item" ><a href="talleres.html">Talleres</a></li>
-          <li class="item"><a href="nosotros.html">Nosotros</a></li>
-          <li class="item"><a href="contactos.html">Contacto</a></li>
-          <li class="item"><a href="registro.php">Registrarse</a></li>
-          <li class="item"><a href="inscribirse.php">Incribirme</a></li>
-          <li class="item"><a href="logout.php">Salir</a></li>
+
+  <nav class="navbar navbar-expand-md">
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a  class="nav-link" href="home.php"> Inicio</a> </li>
+          <li class="nav-item"><a  class="nav-link"  href="cursos.html">Cursos</a> </li>
+          <li class="nav-item"><a  class="nav-link" href="talleres.html">Talleres</a></li>
+          <li class="nav-item"><a  class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a  class="nav-link" href="contactos.html">Contacto</a></li>
+          <li class="nav-item"><a  class="nav-link" href="registro.php">Registrarse</a></li>
+          <li class="nav-item"><a  class="nav-link" href="inscribirse.php">Incribirme</a></li>
+          <li class="nav-item"><a  class="nav-link" href="logout.php">Salir</a></li>
         </ul>
+    </div>
   </nav>
-</div>
+
 
 <div class="top_Image">
   <img src="img/principal.jpg" alt="">
@@ -71,7 +79,26 @@ $currentUser = $sesion->getCurrentUser();
 
 </div>
 
+<!-- Contenedor de bootstrap para las grid -->
 
+<!-- Grid para la tarjeta del nuevo curso -->
+<div class="container features">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Nuevo Curso</h3>
+      <img src="img/moon.jpeg" class="img-fluid">
+      <p>Diseño de videojuegos 2D</p>
+    </div>
+    <!-- Grid para la descripcion -->
+    <div class="col">
+      <p>Aprende a diseñar y codificar videojuegos en 2D completamente funcionales con nuestro curso de "Diseño de videojuegos en 2D"</p>
+    </div>
+
+  </div>
+
+
+</div>
+<!--
 <div class="band">
 
   <div class="item-1">
@@ -90,12 +117,14 @@ $currentUser = $sesion->getCurrentUser();
   <p class="principal">Aprende a diseñar y codificar videojuegos en 2D completamente funcionales con nuestro curso de "Diseño de videojuegos en 2D"</p>
 
 </div>
+codigo par tarjeta sin bootstrap -->
 
+<!-- Titulo principal -->
 <div class="titulo_Principal">
   <h1>Ultimas Noticias</h1>
 </div>
 
-
+<!--
 <div class="band">
   <div class="item-1">
     <a href="#" class="card">
@@ -124,14 +153,37 @@ $currentUser = $sesion->getCurrentUser();
     </a>
   </div>
 
+</div>   -->
+
+<!-- Contenedor bootstrap para las grid que ordenan y muestran los elementos de las noticias -->
+<div class="container features">
+  <div class="row">
+    <!-- Clase div para la primera noticia -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">La proxima evolucion de los videojuegos</h3>
+      <img src="img/evo_videojuegos.jpg" class="img-fluid">
+      <p>La proxima evolucion de los videojuegos</p>
+    </div>
+    <!-- Clase div para la segunda noticia -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Aumenta el consumo de realidad aumentada</h3>
+      <img src="img/R_aumentada.jpg" class="img-fluid">
+      <p>Aumenta el consumo de realidad aumentada</p>
+    </div>
+    <!-- Clase div para la tercera noticia -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Pokemon Go tiene ganancias por mas de 800 millones</h3>
+      <img src="img/pokemon_go.jpg" class="img-fluid">
+      <p>Pokemon Go tiene ganancias por mas de 800 millones</p>
+    </div>
+  </div>
 </div>
 
-
-
-
+<!-- Enlace al jquery y el Js para hacer funcionar bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
 
   </body>
-
 
   <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="social-wrapper">
@@ -151,8 +203,8 @@ $currentUser = $sesion->getCurrentUser();
     </ul>
   </div>
 
-
 </footer>
+
 
 
 
